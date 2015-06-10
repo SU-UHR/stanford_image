@@ -145,6 +145,42 @@ function stanford_image_strongarm() {
       'stanford_icon_profile' => array(
         'custom_settings' => TRUE,
       ),
+      'caw_banner' => array(
+        'custom_settings' => TRUE,
+      ),
+      'numbered_guide' => array(
+        'custom_settings' => FALSE,
+      ),
+      'stanford_tiles' => array(
+        'custom_settings' => TRUE,
+      ),
+      'large_landscape' => array(
+        'custom_settings' => FALSE,
+      ),
+      'stanford_block' => array(
+        'custom_settings' => TRUE,
+      ),
+      'stanford_list' => array(
+        'custom_settings' => FALSE,
+      ),
+      'stanford_callout_block' => array(
+        'custom_settings' => FALSE,
+      ),
+      's_caw_carousel' => array(
+        'custom_settings' => TRUE,
+      ),
+      'caw_banner_9_column' => array(
+        'custom_settings' => TRUE,
+      ),
+      'gallery_large' => array(
+        'custom_settings' => FALSE,
+      ),
+      'gallery_medium' => array(
+        'custom_settings' => FALSE,
+      ),
+      'gallery_small' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

@@ -296,6 +296,42 @@ function stanford_image_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+  $translatables['stanford_bulk_fc_image_administration'] = array(
+    t('Master'),
+    t('Bulk Image Operations'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('Block using image'),
+    t('Content using Image'),
+    t('Field collection item'),
+    t('- Choose an operation -'),
+    t('URL'),
+    t('Image'),
+    t('Title'),
+    t('New'),
+    t('Label'),
+    t('Published'),
+    t('Caption'),
+    t('Credits'),
+    t('Post date'),
+    t('Field collection item ID'),
+    t('.'),
+    t(','),
+    t('Edit'),
+    t('Page'),
+    t('Block'),
+  );
   $export['stanford_bulk_fc_image_administration'] = $view;
 
   $view = new view();
@@ -312,8 +348,12 @@ function stanford_image_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Image Credits';
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '3600';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '3600';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -442,6 +482,30 @@ function stanford_image_views_default_views() {
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '100';
+  $translatables['stanford_image_credits'] = array(
+    t('Master'),
+    t('Image Credits'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('Caption'),
+    t('Credits'),
+    t('URL'),
+    t('Filter by Caption'),
+    t('Filter by Credits'),
+    t('Page'),
+    t('Block'),
+  );
   $export['stanford_image_credits'] = $view;
 
   return $export;
